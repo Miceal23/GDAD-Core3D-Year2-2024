@@ -20,24 +20,29 @@ void Awake()
 }
 void Start()
 {
-    totalCollectibles = FindObjectsOfType<Collectible>().Length;
+    
     UpdateScoreText();
     winText.SetActive(false);
     gameOverText.SetActive(false);
-}
+    totalCollectibles = FindObjectsOfType<Collectible>().Length;
+    }
 void Update()
 {
+    if (totalCollectibles <= 0) 
+    {
+            totalCollectibles = FindObjectsOfType<Collectible>().Length; Debug.Log($"Number of Collectibles {totalCollectibles}"); 
+    }
     timer -= Time.deltaTime;
     UpdateTimerText();
     if (timer <= 0)
     {
         GameOver();
     }
-    if (score >= totalCollectibles)
-    {
-        Win();
+        if (score >= totalCollectibles)
+        {
+            Win();
+        }
     }
-}
 public void IncreaseScore()
 {
     score++;
