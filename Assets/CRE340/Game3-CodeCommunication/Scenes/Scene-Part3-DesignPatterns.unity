@@ -281,7 +281,6 @@ MonoBehaviour:
   spawnArea: {x: 22, y: 0, z: 22}
   minSpawnInterval: 0.5
   maxSpawnInterval: 2
-  maxSpawnedObjects: 10
   spawnedObjects: []
 --- !u!4 &189863286
 Transform:
@@ -311,7 +310,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPosition: {x: 0, y: 0, z: 0}
-  spawnDelay: 0.5
 --- !u!1 &223660204
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,7 +943,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.000061035156}
   m_SizeDelta: {x: 512, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &346320147
@@ -1995,7 +1993,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 20, y: 0}
+  m_AnchoredPosition: {x: 20, y: -0.000061035156}
   m_SizeDelta: {x: 512, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &744910895
@@ -5896,7 +5894,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2095147851}
   - component: {fileID: 2095147850}
-  - component: {fileID: 2095147852}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -5936,19 +5933,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2095147852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2095147849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d38cc8661976c24438ddb31f70ae18eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  items: []
 --- !u!1001 &2143510775
 PrefabInstance:
   m_ObjectHideFlags: 0

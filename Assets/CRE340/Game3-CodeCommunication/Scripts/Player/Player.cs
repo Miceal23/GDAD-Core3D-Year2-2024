@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using DG.Tweening;
 
 public class Player : MonoBehaviour, IDamagable
 {
@@ -22,6 +24,13 @@ public class Player : MonoBehaviour, IDamagable
         mat = GetComponent<Renderer>().material;
         originalColor = mat.color;
     }
+    
+    private void OnEnable()
+    {
+        // TODO - add an animation event to play the spawn animation tween
+        //scale the player up from 0 to 1 in 1 second using DOTween
+
+    }
 
     public void TakeDamage(int damage)
     {
@@ -33,6 +42,14 @@ public class Player : MonoBehaviour, IDamagable
         
         //update the player health UI
         GameManager.Instance.SetPlayerHealth(health);
+        
+        //TODO - add a camera shake effect when the player is hit
+        
+        
+        
+        //TODO - add a chromatic aberation lerp effect when the player is hit
+        
+        
 
         ShowHitEffect();
 
@@ -55,6 +72,11 @@ public class Player : MonoBehaviour, IDamagable
             Instantiate(dieEffectPrefab, transform.position, Quaternion.identity);
         }
 
+        //TODO - add and audio feedback when the player dies
+        
+        
+        
+        
         // Optional: Add any additional death logic (e.g., respawn, game over)
        
         //Destroy(gameObject);
@@ -72,6 +94,10 @@ public class Player : MonoBehaviour, IDamagable
         // Flash the player material red on hit
         mat.color = Color.red;
         Invoke("ResetMaterial", 0.1f);
+        
+        //TODO - add an audio feedback when the player is hit
+        
+        
     }
 
     private void ResetMaterial()

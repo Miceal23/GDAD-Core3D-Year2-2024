@@ -1,4 +1,5 @@
 using UnityEngine;
+using DG.Tweening;
 
 public class ExplodingCrate : MonoBehaviour, IDamagable
 {
@@ -14,6 +15,14 @@ public class ExplodingCrate : MonoBehaviour, IDamagable
         originalColor = mat.color;
     }
 
+    private void OnEnable()
+    {
+        // TODO - add an animation event to play the spawn animation tween
+        //scale the crate up from 0 to 1 in 1 second using DOTween
+
+        
+        
+    }
     public void TakeDamage(int damage)
     {
         health -= damage;
@@ -52,5 +61,9 @@ public class ExplodingCrate : MonoBehaviour, IDamagable
         {
             Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
         }
+        
+        //TODO - add and audio feedback when the crate explodes
+        
+        
     }
 }
